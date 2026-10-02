@@ -1,0 +1,4 @@
+// dùng để lưu những file không cần thiết hoặc không muốn đưa lên git, 
+// ví dụ như thư mục node_modules, file .env chứa thông tin nhạy cảm.
+node_modules
+.env 
