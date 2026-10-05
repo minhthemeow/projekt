@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const {default: helmet} = require('helmet');
 const compression = require('compression');
 const app = express();
+
 
 /* 
 Những library cần thiết cho việc xử lý request và response:

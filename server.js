@@ -2,7 +2,7 @@
 
 
 const app = require('./src/app'); 
-const PORT = 3055;
+const PORT = process.env.DEV_APP_PORT || 3055;
 const mongoose = require('mongoose');
 
 const server = app.listen(PORT, () => {
@@ -21,5 +21,4 @@ process.on('SIGINT', async () => {
         console.log('Exit Server');
         process.exit(0);
     });
-    // process.exit(0);
 });

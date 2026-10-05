@@ -5,10 +5,11 @@
 */  
 
 const mongoose = require('mongoose');
-
-const connectString = `mongodb://localhost:27017/shopDEV`;
+const {db: {host, port, name}} = require('../configs/config.mongodb.js');
+const connectString = `mongodb://${host}:${port}/${name}`; // Kết nối đến cơ sở dữ liệu MongoDB với tên shopDEV
 const {countConnect} = require('../helpers/check.connect.js');
 
+console.log(`Connecting to MongoDB at ${connectString}...`);
 class Database {
     constructor() {
         this.connect();
