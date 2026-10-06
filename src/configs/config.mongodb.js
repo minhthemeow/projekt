@@ -36,6 +36,6 @@ const production = {
 }
 
 const config = {dev, production};
-const env = process.env.NODE_ENV || 'dev';
+const env = 'dev' || process.env.NODE_ENV ;
 
 module.exports = config[env];

@@ -17,17 +17,17 @@ compression: nén response để giảm dung lượng dữ liệu truyền tải
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(compression());
-
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}))
 //init database
 require('./dbs/init.mongodb.js');
 const {checkOverload} = require('./helpers/check.connect.js');
 // checkOverload(); // Start monitoring connections and memory usage
 //init routes
-app.get('/', (req, res) => {
-    res.status(200).json({
-        message: 'Hello World'
-    });
-});
+
+app.use('/', require('./routes/index.js'));
 //handle errors
 
 module.exports = app;
