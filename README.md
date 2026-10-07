@@ -24,3 +24,5 @@ project
 5. Should we disconnect to db when connections overload ---> no need. 
 6. poolSize
 ### Setup .env and config files
+### Create Sign Up module with 2 versions(JWT + RSA)
+### Custom Dynamic Middleware for ApiKey and Permissions
